@@ -1,14 +1,5 @@
-<script setup>
-
-</script>
-
+<script setup></script>
 <template>
-<h1>Luan</h1>
-<v-btn>
-  Button
-</v-btn>
+  <router-view></router-view>
 </template>
-
-<style scoped>
-
-</style>
+<style></style>

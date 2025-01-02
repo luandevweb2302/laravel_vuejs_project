@@ -5,6 +5,7 @@ import { createVuetify } from 'vuetify';
 import 'vuetify/styles'; // Vuetify styles
 import { aliases, mdi } from 'vuetify/lib/iconsets/mdi'; // Material Design Icons
 import '@mdi/font/css/materialdesignicons.css';
+import router from './router';
 const vuetify = createVuetify({
     icons: {
       defaultSet: 'mdi',
@@ -15,4 +16,4 @@ const vuetify = createVuetify({
     },
   });
   
-  createApp(App).use(vuetify).mount('#app');
+  createApp(App).use(vuetify).use(router).mount('#app');
