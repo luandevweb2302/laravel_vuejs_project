@@ -25,7 +25,7 @@
 <script>
 import { reactive, ref } from "vue";
 import axios from "axios";
-
+import { useRouter } from "vue-router";
 export default {
   setup() {
     const formData = reactive({
@@ -34,7 +34,7 @@ export default {
       password: "",
       confirmPassword: "",
     });
-
+   const router = useRouter();
     const valid = ref(false);
     const errorMessage = ref("");
 
@@ -56,6 +56,8 @@ export default {
         });
 
         console.log("Success:", response.data);
+        alert("Dang Ky Thanh Cong");
+        router.push('/login')
       } catch (error) {
         if (error.response) {
           console.error("Server lỗiỗi", error.response.data);
